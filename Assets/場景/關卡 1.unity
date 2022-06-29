@@ -4553,8 +4553,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
-  m_sharedMaterial: {fileID: 4791737128934507518, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
+  m_sharedMaterial: {fileID: 2003159576316284464, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4882,8 +4882,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5C64\u6578"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
-  m_sharedMaterial: {fileID: 4791737128934507518, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
+  m_sharedMaterial: {fileID: 2003159576316284464, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6724,7 +6724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &922868192
 Transform:
   m_ObjectHideFlags: 0
@@ -6752,6 +6752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1b159cd19e6f49b8493cb14f4936a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openDoor: 0
+  combo: 0
+  prop: "\u7D05\u8272\u85E5\u6C34"
+  statePlayer: 0
 --- !u!1001 &926085785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8823,6 +8827,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7315600410333644883, guid: 858db88ca2ba75349a0a107eb10f43e6, type: 3}
   m_PrefabInstance: {fileID: 1354526138}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1391573244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100082, guid: a0c20659838f8e147847eda60ff6bdb5, type: 3}
+  m_PrefabInstance: {fileID: 435766299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1431512138
 GameObject:
   m_ObjectHideFlags: 0
@@ -9428,8 +9437,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
-  m_sharedMaterial: {fileID: 4791737128934507518, guid: 079090ec53bbf87479e372b11c6b1e69, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
+  m_sharedMaterial: {fileID: 2003159576316284464, guid: fb9815d13a93feb499112007d1aaa20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15882,6 +15891,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400082, guid: a0c20659838f8e147847eda60ff6bdb5, type: 3}
   m_PrefabInstance: {fileID: 435766299}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1759088338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391573244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30384f4f8dc438240a2de38fc34cb9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 752432224}
+  speedTurn: 10.5
+  marble: {fileID: 811406797474960402, guid: 89a37513e90f00e4b9b760a59b9641ba, type: 3}
+  canShootMarbleTotal: 15
 --- !u!1 &1796107981
 GameObject:
   m_ObjectHideFlags: 0
