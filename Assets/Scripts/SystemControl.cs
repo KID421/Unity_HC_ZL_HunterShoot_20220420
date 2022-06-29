@@ -26,6 +26,29 @@ namespace KID
         #endregion
 
         #region 方法
+        /// <summary>
+        /// 旋轉角色，讓角色面向滑鼠的位置
+        /// </summary>
+        private void TurnCharacter()
+        {
+
+        }
+
+        /// <summary>
+        /// 發射彈珠，根據總數發射彈珠物件
+        /// </summary>
+        private void ShootMarble()
+        {
+
+        }
+
+        /// <summary>
+        /// 回收彈珠
+        /// </summary>
+        private void RecycleMarble()
+        {
+
+        }
         #endregion
     }
 }
