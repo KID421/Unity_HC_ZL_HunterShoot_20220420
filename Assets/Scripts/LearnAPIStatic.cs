@@ -21,5 +21,17 @@ public class LearnAPIStatic : MonoBehaviour
         // 類別名稱.靜態屬性名稱 指定 值；
         Screen.brightness = 0.5f;
         Cursor.visible = false;
+
+        // 靜態方法 static methods
+        // 3. 使用
+        // 類別名稱.靜態方法名稱(對應的引數)；
+        float r = Random.Range(7.7f, 99.9f);
+        print("隨機 7.7 ~ 99.9 數值：" + r);
+    }
+
+    private void Update()
+    {
+        bool downA = Input.GetKeyDown("a");
+        print("是否按下 A：" + downA);
     }
 }

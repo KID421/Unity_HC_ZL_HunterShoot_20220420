@@ -20,9 +20,19 @@ namespace KID
         public GameObject marble;
         [Header("彈珠可以發射的總數"), Range(0, 100)]
         public int canShootMarbleTotal = 15;
+        [Header("彈珠生成點")]
+        public Transform traSpawnPoint;
+        [Header("攻擊參數名稱")]
+        public string parAttack = "觸發攻擊";
+
+        public Animator ani;
         #endregion
 
         #region 事件
+        private void Update()
+        {
+            ShootMarble();
+        }
         #endregion
 
         #region 方法
@@ -39,7 +49,17 @@ namespace KID
         /// </summary>
         private void ShootMarble()
         {
+            // 放開 滑鼠左鍵 生成並發射彈珠
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                print("放開左鍵！");
 
+                // Object 類別可省略不寫
+                // 直接透過 Object 成員名稱使用
+                // 生成(彈珠)；
+                // Quaternion.identity 零度角
+                Instantiate(marble, traSpawnPoint.position, Quaternion.identity);
+            }
         }
 
         /// <summary>
@@ -52,4 +72,3 @@ namespace KID
         #endregion
     }
 }
-
