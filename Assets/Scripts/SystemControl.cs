@@ -24,6 +24,8 @@ namespace KID
         public Transform traSpawnPoint;
         [Header("攻擊參數名稱")]
         public string parAttack = "觸發攻擊";
+        [Header("彈珠發射速度"), Range(0, 5000)]
+        public float speedMarble = 1000;
 
         public Animator ani;
         #endregion
@@ -49,16 +51,26 @@ namespace KID
         /// </summary>
         private void ShootMarble()
         {
-            // 放開 滑鼠左鍵 生成並發射彈珠
-            if (Input.GetKeyUp(KeyCode.Mouse0))
+            // 按下 滑鼠左鍵 顯示 箭頭
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                arrow.SetActive(true);
+            }
+            // 放開 滑鼠左鍵 隱藏箭頭 生成並發射彈珠
+            else if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 print("放開左鍵！");
+
+                arrow.SetActive(false);
 
                 // Object 類別可省略不寫
                 // 直接透過 Object 成員名稱使用
                 // 生成(彈珠)；
                 // Quaternion.identity 零度角
-                Instantiate(marble, traSpawnPoint.position, Quaternion.identity);
+                GameObject tempMarble = Instantiate(marble, traSpawnPoint.position, Quaternion.identity);
+                // 暫存彈珠 取得剛體元件 添加推力 (角色.前方 * 速度)
+                // transform.forward 角色的前方
+                tempMarble.GetComponent<Rigidbody>().AddForce(transform.forward * speedMarble);
             }
         }
 

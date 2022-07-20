@@ -5050,6 +5050,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1025937653188146674, guid: 98714de5fbf6911438f650f6487d7622, type: 3}
   m_PrefabInstance: {fileID: 652796487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &658680428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658680429}
+  - component: {fileID: 658680430}
+  m_Layer: 0
+  m_Name: "\u5B78\u7FD2\u8FF4\u5708"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658680429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658680428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658680430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658680428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901fb94ce69de9d45a355f36f15a9ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &659136398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,7 +6727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &915733890
 Transform:
   m_ObjectHideFlags: 0
@@ -8933,7 +8977,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431512138}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8bd110967bde89845b0623366a8cf29a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -15252,7 +15296,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610423532}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8bd110967bde89845b0623366a8cf29a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -15983,6 +16027,9 @@ MonoBehaviour:
   marble: {fileID: 811406797474960402, guid: 89a37513e90f00e4b9b760a59b9641ba, type: 3}
   canShootMarbleTotal: 15
   traSpawnPoint: {fileID: 386792946}
+  parAttack: "\u89F8\u767C\u653B\u64CA"
+  speedMarble: 1000
+  ani: {fileID: 0}
 --- !u!1 &1796107981
 GameObject:
   m_ObjectHideFlags: 0
@@ -16513,7 +16560,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905926030}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8bd110967bde89845b0623366a8cf29a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -17153,7 +17200,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004072047}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8bd110967bde89845b0623366a8cf29a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
