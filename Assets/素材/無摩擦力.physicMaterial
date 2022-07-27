@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: "\u7121\u6469\u64E6\u529B"
   dynamicFriction: 0
   staticFriction: 0
-  bounciness: 0.5
+  bounciness: 1
   frictionCombine: 0
   bounceCombine: 0
