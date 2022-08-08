@@ -16,6 +16,8 @@ namespace KID
         private GameObject[] goEnemys;
         [Header("生成格子第二排座標"), SerializeField]
         private Transform[] traSecondPlace;
+        [Header("格子 彈珠"), SerializeField]
+        private GameObject goMarble;
 
         [SerializeField]
         private List<Transform> listSecondPlace = new List<Transform>();
@@ -82,9 +84,6 @@ namespace KID
             }
         }
         #endregion
-
-        [Header("格子 彈珠"), SerializeField]
-        private GameObject goMarble;
     }
 }
 
