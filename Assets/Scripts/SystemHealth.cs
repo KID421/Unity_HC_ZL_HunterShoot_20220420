@@ -15,6 +15,46 @@ namespace KID
         private Image imgHp;
         [SerializeField, Header("文字血量")]
         private TextMeshProUGUI textHp;
+        [SerializeField, Header("怪物資料")]
+        private DataEnemy dataEnemy;
+
+        private float hp;
+
+        private void Awake()
+        {
+            hp = dataEnemy.hp;
+            textHp.text = hp.ToString();
+        }
+
+        // 碰撞事件
+        // 1. 兩個物件必須有一個帶有 Rigidbody
+        // 2. 兩個物件必須有碰撞器 Collider
+        // 3. 是否有勾選 Is Trigger
+        // 3-1 兩者都沒有勾選 Is Trigger 使用 OnCollision
+        private void OnCollisionEnter(Collision collision)
+        {
+            GetDamage();
+        }
+
+        /// <summary>
+        /// 受傷
+        /// </summary>
+        private void GetDamage()
+        {
+            hp -= 50;
+            textHp.text = hp.ToString();
+            imgHp.fillAmount = hp / dataEnemy.hp;
+
+            if (hp <= 0) Dead();
+        }
+
+        /// <summary>
+        /// 死亡
+        /// </summary>
+        private void Dead()
+        {
+            print("死亡");
+        }
     }
 }
 
