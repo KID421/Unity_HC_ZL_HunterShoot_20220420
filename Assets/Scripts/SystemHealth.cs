@@ -17,8 +17,11 @@ namespace KID
         private TextMeshProUGUI textHp;
         [SerializeField, Header("怪物資料")]
         private DataEnemy dataEnemy;
+        [SerializeField, Header("敵人動畫控制器")]
+        private Animator aniEnemy;
 
         private float hp;
+        private string parDamage = "觸發受傷";
 
         private void Awake()
         {
@@ -44,6 +47,7 @@ namespace KID
             hp -= 50;
             textHp.text = hp.ToString();
             imgHp.fillAmount = hp / dataEnemy.hp;
+            aniEnemy.SetTrigger(parDamage);
 
             if (hp <= 0) Dead();
         }

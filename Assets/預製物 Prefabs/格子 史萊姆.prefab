@@ -64,6 +64,7 @@ MonoBehaviour:
   imgHp: {fileID: 435861789}
   textHp: {fileID: 1584166761}
   dataEnemy: {fileID: 11400000, guid: b3ff7b13abba27140a5d452c3a3078e0, type: 2}
+  aniEnemy: {fileID: 2534123384514804788}
 --- !u!1001 &2534123384524179796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,6 +142,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 507d4aa237c275a48b72e5772879be66, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f499d0eded7a4245b0c36149a43da4f, type: 3}
+--- !u!95 &2534123384514804788 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 1f499d0eded7a4245b0c36149a43da4f, type: 3}
+  m_PrefabInstance: {fileID: 2534123384524179796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2534123384524313542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400018, guid: 1f499d0eded7a4245b0c36149a43da4f, type: 3}
