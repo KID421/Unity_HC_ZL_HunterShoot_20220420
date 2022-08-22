@@ -9,6 +9,7 @@ namespace KID
     /// </summary>
     public class SystemHealth : MonoBehaviour
     {
+        #region 資料
         [SerializeField, Header("畫布傷害物件")]
         private GameObject goDamage;
         [SerializeField, Header("圖片血量")]
@@ -22,11 +23,15 @@ namespace KID
 
         private float hp;
         private string parDamage = "觸發受傷";
+        #endregion
+
+        private SystemSpawn systemSpawn;
 
         private void Awake()
         {
             hp = dataEnemy.hp;
             textHp.text = hp.ToString();
+            systemSpawn = GameObject.Find("生成怪物系統").GetComponent<SystemSpawn>();
         }
 
         // 碰撞事件
@@ -61,7 +66,10 @@ namespace KID
         /// </summary>
         private void Dead()
         {
-            print("死亡");
+            // print("死亡");
+            Destroy(gameObject);
+            systemSpawn.totalCountEnemyLive--;
+            print("<color=red>怪物數量：" + systemSpawn.totalCountEnemyLive + "</color>");
         }
     }
 }

@@ -33,11 +33,13 @@ namespace KID
         [Header("彈珠數量")]
         public TextMeshProUGUI textMarbleCount;
 
-        private Animator ani;
         /// <summary>
         /// 能否發射彈珠
         /// </summary>
-        private bool canShootMarble = true;
+        [HideInInspector]
+        public bool canShootMarble = true;
+
+        private Animator ani;
         /// <summary>
         /// 轉換滑鼠用攝影機
         /// </summary>
@@ -151,14 +153,6 @@ namespace KID
 
                 yield return new WaitForSeconds(intervalMarble);
             }
-        }
-
-        /// <summary>
-        /// 回收彈珠
-        /// </summary>
-        private void RecycleMarble()
-        {
-
         }
         #endregion
     }

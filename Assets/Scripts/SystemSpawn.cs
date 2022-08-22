@@ -21,6 +21,11 @@ namespace KID
 
         [SerializeField]
         private List<Transform> listSecondPlace = new List<Transform>();
+
+        /// <summary>
+        /// 怪物與可以吃的彈珠存活總數
+        /// </summary>
+        public int totalCountEnemyLive;
         #endregion
 
         #region 事件
@@ -34,7 +39,7 @@ namespace KID
         /// <summary>
         /// 生成隨機敵人
         /// </summary>
-        private void SpawnRandomEnemy()
+        public void SpawnRandomEnemy()
         {
             int min = 2;
             int max = traSecondPlace.Length;
@@ -80,7 +85,11 @@ namespace KID
                         goEnemys[randomIndex],
                         listSecondPlace[i].position,
                         Quaternion.identity);
+
                 }
+
+                totalCountEnemyLive++;
+                // print("<color=#885511>怪物與彈珠數量：" + totalCountEnemyLive + "</color>");
             }
         }
         #endregion
