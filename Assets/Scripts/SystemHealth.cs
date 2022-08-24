@@ -69,7 +69,28 @@ namespace KID
             // print("死亡");
             Destroy(gameObject);
             systemSpawn.totalCountEnemyLive--;
-            print("<color=red>怪物數量：" + systemSpawn.totalCountEnemyLive + "</color>");
+            // print("<color=red>怪物數量：" + systemSpawn.totalCountEnemyLive + "</color>");
+            DropCoin();
+        }
+
+        /// <summary>
+        /// 掉落金幣
+        /// </summary>
+        private void DropCoin()
+        {
+            int range = Random.Range(dataEnemy.v2CoinRange.x, dataEnemy.v2CoinRange.y);
+
+            for (int i = 0; i < range; i++)
+            {
+                float x = Random.Range(-1.5f, 1.5f);
+                float z = Random.Range(-1.5f, 1.5f);
+                float zAngle = Random.Range(0, 360);
+
+                Instantiate(
+                    dataEnemy.goCoin, 
+                    transform.position + new Vector3(x, 2.5f, z), 
+                    Quaternion.Euler(90, 180, zAngle));
+            }
         }
     }
 }

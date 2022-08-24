@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1000
   damage: 100
+  goCoin: {fileID: 5068073996644108436, guid: 3a7c453894fe23442acd562f4baed53f, type: 3}
+  v2CoinRange: {x: 0, y: 10}
