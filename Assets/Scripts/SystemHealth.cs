@@ -25,13 +25,33 @@ namespace KID
         private string parDamage = "觸發受傷";
         #endregion
 
+        /// <summary>
+        /// 碰到會受傷的物件名稱
+        /// </summary>
+        [SerializeField, Header("碰到會受傷的物件名稱")]
+        private string nameHurtObject;
+        [Header("玩家接收傷害區域")]
+        [SerializeField] private Vector3 v3DamageSize;
+        [SerializeField] private Vector3 v3DamagePosition;
+
         private SystemSpawn systemSpawn;
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = new Color(0.2f, 1, 0.2f, 0.5f);
+            Gizmos.DrawCube(v3DamagePosition, v3DamageSize);
+        }
 
         private void Awake()
         {
             hp = dataEnemy.hp;
             textHp.text = hp.ToString();
             systemSpawn = GameObject.Find("生成怪物系統").GetComponent<SystemSpawn>();
+        }
+
+        private void Update()
+        {
+            CheckObjectInDamageArea();
         }
 
         // 碰撞事件
@@ -41,7 +61,20 @@ namespace KID
         // 3-1 兩者都沒有勾選 Is Trigger 使用 OnCollision
         private void OnCollisionEnter(Collision collision)
         {
-            GetDamage();
+            if (collision.gameObject.name.Contains(nameHurtObject)) GetDamage();
+        }
+
+        /// <summary>
+        /// 檢查物件是否進入受傷區域
+        /// </summary>
+        private void CheckObjectInDamageArea()
+        {
+            Collider[] hits = Physics.OverlapBox(v3DamagePosition, v3DamageSize / 2);
+
+            if (hits.Length > 0)
+            {
+                print("進到受傷區域的物件：" + hits[0]);
+            }
         }
 
         /// <summary>

@@ -66,6 +66,7 @@ MonoBehaviour:
   textHp: {fileID: 1584166761}
   dataEnemy: {fileID: 11400000, guid: b3ff7b13abba27140a5d452c3a3078e0, type: 2}
   aniEnemy: {fileID: 2534123384514804788}
+  nameHurtObject: "\u5F48\u73E0"
 --- !u!114 &8708071521576518576
 MonoBehaviour:
   m_ObjectHideFlags: 0

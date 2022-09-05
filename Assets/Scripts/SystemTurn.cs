@@ -33,6 +33,8 @@ namespace KID
         private bool canSpawn = true;
         #endregion
 
+        private int countMarbleEat;
+
         private void Awake()
         {
             systemControl = GameObject.Find("哥布林").GetComponent<SystemControl>();
@@ -79,6 +81,19 @@ namespace KID
             systemControl.canShootMarble = true;
             canSpawn = true;
             totalRecycleMarble = 0;
+
+            #region 彈珠數量處理
+            systemControl.canShootMarbleTotal += countMarbleEat;
+            countMarbleEat = 0;
+            #endregion
+        }
+
+        /// <summary>
+        /// 吃到彈珠數量遞增
+        /// </summary>
+        public void MarbleEat()
+        {
+            countMarbleEat++;
         }
     }
 }
