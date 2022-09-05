@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2534123384852434376}
   - component: {fileID: 5538634246324641585}
   - component: {fileID: 8708071521576518576}
+  - component: {fileID: -2116284573230398987}
   m_Layer: 7
   m_Name: "\u683C\u5B50 \u53F2\u840A\u59C6"
   m_TagString: Untagged
@@ -67,6 +68,11 @@ MonoBehaviour:
   dataEnemy: {fileID: 11400000, guid: b3ff7b13abba27140a5d452c3a3078e0, type: 2}
   aniEnemy: {fileID: 2534123384514804788}
   nameHurtObject: "\u5F48\u73E0"
+  v3DamageSize: {x: 0, y: 0, z: 0}
+  v3DamagePosition: {x: 0, y: 0, z: 0}
+  layerDamage:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8708071521576518576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +85,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0458aa78425f3224392713e9f567a339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2116284573230398987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534123384852434377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d91133cafbaf80f48874654d232c5b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataAttack: {fileID: 11400000, guid: a4b8f9e1ade98594da7a28b8fd68f449, type: 2}
+  valueAttack: 0
 --- !u!1001 &2534123384524179796
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,6 +33,8 @@ namespace KID
         [Header("玩家接收傷害區域")]
         [SerializeField] private Vector3 v3DamageSize;
         [SerializeField] private Vector3 v3DamagePosition;
+        [SerializeField, Header("接收傷害的圖層")]
+        private LayerMask layerDamage;
 
         private SystemSpawn systemSpawn;
 
@@ -69,11 +71,14 @@ namespace KID
         /// </summary>
         private void CheckObjectInDamageArea()
         {
-            Collider[] hits = Physics.OverlapBox(v3DamagePosition, v3DamageSize / 2);
+            Collider[] hits = Physics.OverlapBox(
+                v3DamagePosition, v3DamageSize / 2, 
+                Quaternion.identity, layerDamage);
 
             if (hits.Length > 0)
             {
-                print("進到受傷區域的物件：" + hits[0]);
+                GetDamage();
+                Destroy(hits[0].gameObject);
             }
         }
 
