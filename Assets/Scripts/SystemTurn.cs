@@ -58,6 +58,11 @@ namespace KID
             {
                 // print("回收完畢，換敵人回合");
                 onTurnEnemy.Invoke();
+
+                if (FindObjectsOfType<SystemMove>().Length == 0)
+                {
+                    MoveEndSpawnEnemy();
+                }
             }
         }
 

@@ -87,7 +87,7 @@ namespace KID
         /// </summary>
         private void GetDamage()
         {
-            float getDamage = 50;
+            float getDamage = 500;
             hp -= getDamage;
             textHp.text = hp.ToString();
             imgHp.fillAmount = hp / dataEnemy.hp;
