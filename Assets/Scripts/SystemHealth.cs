@@ -35,8 +35,11 @@ namespace KID
         [SerializeField] private Vector3 v3DamagePosition;
         [SerializeField, Header("接收傷害的圖層")]
         private LayerMask layerDamage;
+        [SerializeField, Header("是否為玩家")]
+        private bool isPlayer;
 
         private SystemSpawn systemSpawn;
+        private SystemFinal systemFinal;
 
         private void OnDrawGizmos()
         {
@@ -49,6 +52,7 @@ namespace KID
             hp = dataEnemy.hp;
             textHp.text = hp.ToString();
             systemSpawn = GameObject.Find("生成怪物系統").GetComponent<SystemSpawn>();
+            systemFinal = FindObjectOfType<SystemFinal>();
         }
 
         private void Update()
@@ -104,11 +108,13 @@ namespace KID
         /// </summary>
         private void Dead()
         {
-            // print("死亡");
-            Destroy(gameObject);
-            systemSpawn.totalCountEnemyLive--;
-            // print("<color=red>怪物數量：" + systemSpawn.totalCountEnemyLive + "</color>");
-            DropCoin();
+            if (isPlayer) systemFinal.ShowFinalAndUpdateSubTitle("挑戰關卡失敗...");
+            else
+            {
+                Destroy(gameObject);
+                systemSpawn.totalCountEnemyLive--;
+                DropCoin();
+            }
         }
 
         /// <summary>

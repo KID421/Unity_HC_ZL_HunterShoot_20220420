@@ -46,6 +46,8 @@ namespace KID
         private bool isFloorCountMax;
         #endregion
 
+        private SystemFinal systemFinal;
+
         private void Awake()
         {
             systemControl = GameObject.Find("哥布林").GetComponent<SystemControl>();
@@ -54,6 +56,8 @@ namespace KID
             textFloorCount = GameObject.Find("層數數字").GetComponent<TextMeshProUGUI>();
 
             recycleArea.onRecycle.AddListener(RecycleMarble);
+
+            systemFinal = FindObjectOfType<SystemFinal>();
         }
 
         /// <summary>
@@ -119,7 +123,7 @@ namespace KID
             {
                 if (FindObjectsOfType<SystemMove>().Length == 0)
                 {
-                    print("關卡挑戰成功");
+                    systemFinal.ShowFinalAndUpdateSubTitle("恭喜挑戰關卡成功！");
                 }
             }
         }

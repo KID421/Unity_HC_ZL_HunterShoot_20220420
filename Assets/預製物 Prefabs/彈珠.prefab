@@ -4827,6 +4827,7 @@ GameObject:
   - component: {fileID: 811406797474960405}
   - component: {fileID: 7245440682078602829}
   - component: {fileID: 2393763283783829942}
+  - component: {fileID: 2826264172298856700}
   m_Layer: 3
   m_Name: "\u5F48\u73E0"
   m_TagString: Untagged
@@ -4947,7 +4948,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &2393763283783829942
 MonoBehaviour:
@@ -4963,3 +4964,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataAttack: {fileID: 11400000, guid: 49bf7b3eb362c1347adc540c51f730cf, type: 2}
   valueAttack: 0
+--- !u!114 &2826264172298856700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811406797474960402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f723bd7b9fb52914192f661321f9c9fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerEnemy:
+    serializedVersion: 2
+    m_Bits: 128
+  timeRecycle: 5
+  v3SpeedRecycle: {x: 0, y: 0, z: -1500}
