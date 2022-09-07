@@ -63,7 +63,8 @@ namespace KID
         // 3-1 兩者都沒有勾選 Is Trigger 使用 OnCollision
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.name.Contains(nameHurtObject)) GetDamage();
+            if (collision.gameObject.name.Contains(nameHurtObject)) 
+                GetDamage(collision.gameObject.GetComponent<SystemAttack>().valueAttack);
         }
 
         /// <summary>
@@ -77,7 +78,7 @@ namespace KID
 
             if (hits.Length > 0)
             {
-                GetDamage();
+                GetDamage(hits[0].GetComponent<SystemAttack>().valueAttack);
                 Destroy(hits[0].gameObject);
             }
         }
@@ -85,9 +86,8 @@ namespace KID
         /// <summary>
         /// 受傷
         /// </summary>
-        private void GetDamage()
+        private void GetDamage(float getDamage)
         {
-            float getDamage = 50;
             hp -= getDamage;
             textHp.text = hp.ToString();
             imgHp.fillAmount = hp / dataEnemy.hp;
