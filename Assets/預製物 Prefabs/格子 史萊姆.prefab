@@ -73,6 +73,9 @@ MonoBehaviour:
   layerDamage:
     serializedVersion: 2
     m_Bits: 0
+  isPlayer: 0
+  soundHurt: {fileID: 8300000, guid: d6a565b3ea4a3cc499591b8ccaf3cc01, type: 3}
+  soundDead: {fileID: 8300000, guid: dd98b799257e24f4688479f352f241ba, type: 3}
 --- !u!114 &8708071521576518576
 MonoBehaviour:
   m_ObjectHideFlags: 0

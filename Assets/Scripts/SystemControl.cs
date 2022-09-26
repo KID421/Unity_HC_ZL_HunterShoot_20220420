@@ -126,6 +126,9 @@ namespace KID
             }
         }
 
+        [SerializeField, Header("發射彈珠音效")]
+        private AudioClip soundShoot;
+
         /// <summary>
         /// 生成彈珠附帶間隔時間
         /// </summary>
@@ -145,6 +148,9 @@ namespace KID
                 // 暫存彈珠 取得剛體元件 添加推力 (角色.前方 * 速度)
                 // transform.forward 角色的前方
                 tempMarble.GetComponent<Rigidbody>().AddForce(transform.forward * speedMarble);
+
+                // 音效系統.靜態實體.播放音效(音效，音量範圍)
+                SystemSound.instance.PlaySound(soundShoot, new Vector2(0.7f, 1.2f));
 
                 total--;
 
